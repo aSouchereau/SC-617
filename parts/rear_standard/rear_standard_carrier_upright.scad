@@ -2,7 +2,7 @@ include <../../constants.scad>
 
 module rear_standard_carrier_screw_holes() {
     triangle_side_length = (rear_standard_carrier_width / 3) + rear_standard_carrier_screw_hole_diameter;
-    triangle_vertical_height = sqrt(pow(triangle_side_length,2) + pow(triangle_side_length / 2,2));
+    triangle_vertical_height = (triangle_side_length * sqrt(3)) / 2;
     translate(v = [triangle_vertical_height / 2,triangle_side_length / 2]) {
         circle(d = rear_standard_carrier_screw_hole_diameter);
     }

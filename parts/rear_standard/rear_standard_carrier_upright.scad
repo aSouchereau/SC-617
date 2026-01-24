@@ -1,20 +1,6 @@
 include <../../constants.scad>
-
-module rear_standard_carrier_screw_holes() {
-    triangle_side_length = (rear_standard_carrier_width / 3) + rear_standard_carrier_screw_hole_diameter;
-    triangle_vertical_height = (triangle_side_length * sqrt(3)) / 2;
-    translate(v = [triangle_vertical_height / 2,triangle_side_length / 2]) {
-        circle(d = rear_standard_carrier_screw_hole_diameter);
-    }
-    translate(v = [triangle_vertical_height / 2,-triangle_side_length / 2]) {
-        circle(d = rear_standard_carrier_screw_hole_diameter);
-    }
-    translate(v = [-triangle_vertical_height / 2,0]) {
-        circle(d = rear_standard_carrier_screw_hole_diameter);
-    }
-}
-
-// rear_standard_carrier_screw_holes();
+use <rear_standard_carrier_screw_holes.scad>
+use <rear_standard_carrier_base.scad>
 
 module rear_standard_carrier_upright() {
     difference() {
@@ -30,10 +16,15 @@ module rear_standard_carrier_upright() {
         }
 
         // Screw Holes
-        translate(v = [-(rear_standard_carrier_upright_length / 2) + (rear_standard_carrier_base_flat_length / 2),0,0]) {
+        screw_hole_offset = -(rear_standard_carrier_upright_length / 2) + rear_standard_carrier_base_flat_length - (rear_standard_carrier_screw_hole_triangle_height / 2) - rear_standard_carrier_screw_hole_triangle_top_margin;
+        translate(v = [screw_hole_offset,0,0]) {
             rear_standard_carrier_screw_holes();
         } 
     }
 }
+
+debug_base_flat_offset = -(rear_standard_carrier_upright_length / 2) + rear_standard_carrier_base_flat_length / 2;
+// #translate(v = [debug_base_flat_offset,0,0]) rear_standard_carrier_base_flat();
+
 
 rear_standard_carrier_upright();

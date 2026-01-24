@@ -32,3 +32,6 @@
     rear_standard_carrier_upright_length = 149;
     rear_standard_carrier_upright_slot_width = 6;
     rear_standard_carrier_screw_hole_diameter = screw_hole_metric_4;
+    rear_standard_carrier_screw_hole_triangle_side_length = (rear_standard_carrier_width / 3) + rear_standard_carrier_screw_hole_diameter;
+    rear_standard_carrier_screw_hole_triangle_height = (rear_standard_carrier_screw_hole_triangle_side_length * sqrt(3)) / 2;
+    rear_standard_carrier_screw_hole_triangle_top_margin = 5;

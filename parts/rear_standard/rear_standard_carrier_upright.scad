@@ -3,6 +3,7 @@ use <rear_standard_carrier_screw_holes.scad>
 use <rear_standard_carrier_base.scad>
 
 module rear_standard_carrier_upright() {
+    linear_extrude(height = rear_standard_carrier_thickness, center = true)
     difference() {
         square([rear_standard_carrier_upright_length, rear_standard_carrier_width], center = true);
 

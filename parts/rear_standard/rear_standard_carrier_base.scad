@@ -14,12 +14,22 @@ module rear_standard_carrier_base_flat () {
 }
 
 // rear_standard_carrier_base_flat();
-
 module rear_standard_carrier_base(folded = true) {
     linear_extrude(height = rear_standard_carrier_thickness) {
         difference() {
-            square([rear_standard_carrier_base_length, rear_standard_carrier_width], center = true);
-            square([160, 6], center = true);
+            union() {
+                square([rear_standard_carrier_base_length, rear_standard_carrier_width], center = true);
+
+                // Zero marker
+                zero_marker_offset = rear_standard_carrier_width / 2;
+                translate(v = [0,zero_marker_offset,0]) {    
+                    rotate(a = 45, v = [0,0,1]) {
+                        square(size = [4,4], center = true);
+                    }
+                } 
+            }
+            // slot
+            square([rear_standard_carrier_base_slot_length, rear_standard_carrier_base_slot_width], center = true);
         }
     }
 

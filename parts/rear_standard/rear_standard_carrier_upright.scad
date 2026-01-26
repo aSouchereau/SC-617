@@ -5,7 +5,19 @@ use <rear_standard_carrier_base.scad>
 module rear_standard_carrier_upright() {
     linear_extrude(height = rear_standard_carrier_thickness, center = true)
     difference() {
-        square([rear_standard_carrier_upright_length, rear_standard_carrier_width], center = true);
+        union() {
+            square([rear_standard_carrier_upright_length, rear_standard_carrier_width], center = true);
+
+            // Zero marker
+            zero_marker_offset_x = 10;
+            zero_marker_offset_y = rear_standard_carrier_width / 2;
+            translate(v = [zero_marker_offset_x,zero_marker_offset_y,0]) {    
+                rotate(a = 45, v = [0,0,1]) {
+                    square(size = [4,4], center = true);
+                }
+            } 
+        }
+
 
         // Movement Screw Slot
         slot_top_margin = (rear_standard_carrier_width - rear_standard_carrier_upright_slot_width) / 2;

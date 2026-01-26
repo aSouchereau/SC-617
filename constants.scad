@@ -29,6 +29,8 @@
     rear_standard_carrier_width = 26;
     rear_standard_carrier_base_length = 258.5;
     rear_standard_carrier_base_flat_length = 30.25;
+    rear_standard_carrier_base_slot_length = 160;
+    rear_standard_carrier_base_slot_width = 6;
     rear_standard_carrier_upright_length = 149;
     rear_standard_carrier_upright_slot_width = 6;
     rear_standard_carrier_screw_hole_diameter = screw_hole_metric_4;

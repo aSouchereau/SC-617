@@ -4,6 +4,8 @@
 // 1. Materials
 // 2. Rear Standard
     // 2.1 Rear Standard Carrier
+    // 2.2 Rear Standard Housing
+    // 2.3 Rear Standard Tilt Plate
 // 3. Front Standard
 // 4. Base
 // 5. Ground Glass
@@ -37,3 +39,16 @@
     rear_standard_carrier_screw_hole_triangle_side_length = (rear_standard_carrier_width / 3) + rear_standard_carrier_screw_hole_diameter;
     rear_standard_carrier_screw_hole_triangle_height = (rear_standard_carrier_screw_hole_triangle_side_length * sqrt(3)) / 2;
     rear_standard_carrier_screw_hole_triangle_top_margin = 5;
+
+    // 2.2 Rear Standard Housing
+    rear_standard_housing_width = 245;
+    rear_standard_housing_height = 126;
+    rear_standard_housing_depth = 30;
+    rear_standard_housing_thickness = 10;
+
+
+    // 2.3 Rear Standard Tilt Plate
+    rear_standard_tilt_slot_outer_radius = 45;
+    rear_standard_tilt_slot_width = 5;
+    rear_standard_tilt_slot_range = 50;
+    rear_standard_tilt_slot_rotational_offset = 5;

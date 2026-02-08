@@ -28,22 +28,29 @@ module rear_standard_housing_side_long() {
 }
 
 module rear_standard_housing_side_short() {
-    linear_extrude(height = rear_standard_housing_thickness) {
-        difference() {
-            square(size = [rear_standard_housing_height,rear_standard_housing_depth], center = true);
-            finger_holes(part_width = rear_standard_housing_height);
-            mirror(v = [1,0,0]) {
+    difference() {
+        linear_extrude(height = rear_standard_housing_thickness) {
+            difference() {
+                square(size = [rear_standard_housing_height,rear_standard_housing_depth], center = true);
                 finger_holes(part_width = rear_standard_housing_height);
+                mirror(v = [1,0,0]) {
+                    finger_holes(part_width = rear_standard_housing_height);
+                }
             }
         }
+        translate(v = [0,0,-1]) {
+            linear_extrude(height = 6) {
+                circle(r = 2);
+            } 
+        }
+        translate(v = [0,0,-6]) {
+            linear_extrude(height = rear_standard_housing_thickness) {
+                rear_standard_tilt_slot(additional_slot_width = rear_standard_housing_tilt_slot_additional_width);
+            } 
+        } 
     }
-    linear_extrude(height = rear_standard_housing_thickness / 3) {
-
-    } 
 }
-
-rear_standard_tilt_slot();
 
 
 // rear_standard_housing_side_long();
-// rear_standard_housing_side_short();
+rear_standard_housing_side_short();

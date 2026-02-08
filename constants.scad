@@ -45,10 +45,11 @@
     rear_standard_housing_height = 126;
     rear_standard_housing_depth = 30;
     rear_standard_housing_thickness = 10;
+    rear_standard_housing_tilt_slot_additional_width = 2; // screw head diameter + small margin - rear_standard_tilt_slot_width
 
 
     // 2.3 Rear Standard Tilt Plate
-    rear_standard_tilt_slot_outer_radius = 45;
+    rear_standard_tilt_slot_radius = 45;
     rear_standard_tilt_slot_width = 5;
     rear_standard_tilt_slot_range = 50;
     rear_standard_tilt_slot_rotational_offset = 5;

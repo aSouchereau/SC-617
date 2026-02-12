@@ -45,6 +45,7 @@
     rear_standard_housing_height = 126;
     rear_standard_housing_depth = 30;
     rear_standard_housing_thickness = 10;
+    rear_standard_housing_frame_width = 33;
     rear_standard_housing_tilt_slot_additional_width = 2; // screw head diameter + small margin - rear_standard_tilt_slot_width
 
 

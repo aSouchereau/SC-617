@@ -51,6 +51,27 @@ module rear_standard_housing_side_short() {
     }
 }
 
+module rear_standard_housing() {
+    rear_standard_housing_side_long();
+    translate(v = [0,0,rear_standard_housing_height - rear_standard_housing_thickness]) {
+        rear_standard_housing_side_long();
+    }
+    translate(v = [rear_standard_housing_width / 2,0,rear_standard_housing_height / 2]) {
+        rotate(a = [0,90,180]) {
+            rear_standard_housing_side_short();
+        } 
+    }
+    mirror(v = [1,0,0]) {
+        translate(v = [rear_standard_housing_width / 2,0,rear_standard_housing_height / 2]) {
+            rotate(a = [0,90,180]) {
+                rear_standard_housing_side_short();
+            } 
+        } 
+    } 
+}
+
+rear_standard_housing();
+
 
 // rear_standard_housing_side_long();
-rear_standard_housing_side_short();
+// rear_standard_housing_side_short();

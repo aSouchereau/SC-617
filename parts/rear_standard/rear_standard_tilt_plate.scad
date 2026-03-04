@@ -5,16 +5,16 @@ module rear_standard_tilt_plate() {
     difference() {
         // base shape
         union() {
-            translate(v = [0,rear_standard_housing_height / 4,0]) {
-                square(size = [rear_standard_housing_depth,rear_standard_housing_height / 2], center = true);
+            slot_outline_thickness = 3;
+            translate(v = [0,rear_standard_housing_height / 5,0]) {
+                square(size = [rear_standard_housing_depth,rear_standard_housing_height / 1.75], center = true);
             }
             rotate(a = 90, v = [0,0,1]) {
-                offset(delta = 3) {
-                    rear_standard_tilt_slot();
-                } 
+                rear_standard_tilt_slot(additional_slot_width = slot_outline_thickness * 2);
             }
         }
-
+        // hole for pivot stud
+        #circle(r = (rear_standard_pivot_stud_diameter / 2) + 1);
         // slot cutout
         rotate(a = 90, v = [0,0,1]) {
             rear_standard_tilt_slot();

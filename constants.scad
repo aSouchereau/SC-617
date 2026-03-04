@@ -6,6 +6,7 @@
     // 2.1 Rear Standard Carrier
     // 2.2 Rear Standard Housing
     // 2.3 Rear Standard Tilt Plate
+    // 2.4 Rear Standard Rise Plate
 // 3. Front Standard
 // 4. Base
 // 5. Ground Glass
@@ -54,3 +55,7 @@
     rear_standard_tilt_slot_width = 5;
     rear_standard_tilt_slot_range = 50;
     rear_standard_tilt_slot_rotational_offset = 5;
+
+    // 2.4 Rear Standard Rise Plate
+    rear_standard_pivot_stud_diameter = 4;
+    

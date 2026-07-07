@@ -27,6 +27,19 @@ module rear_standard_housing_side_long() {
     }
 }
 
+module rear_standard_housing_side_long_bottom() {
+    difference() {
+        rear_standard_housing_side_long();
+        linear_extrude(height = rear_standard_housing_thickness) 
+        polygon(points = [
+            [10, rear_standard_housing_depth / 2],
+            [rear_standard_housing_width / 5, -(rear_standard_housing_depth / 2)],
+            [-(rear_standard_housing_width / 5), -(rear_standard_housing_depth / 2)],
+            [-10, rear_standard_housing_depth / 2]]
+        );
+    }
+}
+
 module rear_standard_housing_side_short() {
     difference() {
         linear_extrude(height = rear_standard_housing_thickness) {
@@ -52,7 +65,7 @@ module rear_standard_housing_side_short() {
 }
 
 module rear_standard_housing() {
-    rear_standard_housing_side_long();
+    rear_standard_housing_side_long_bottom();
     translate(v = [0,0,rear_standard_housing_height - rear_standard_housing_thickness]) {
         rear_standard_housing_side_long();
     }

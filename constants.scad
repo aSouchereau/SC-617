@@ -31,7 +31,7 @@
 
     // 2.1 Rear Standard Carrier
     rear_standard_carrier_thickness = sheet_metal_thickness_structural;
-    rear_standard_carrier_width = 26;
+    rear_standard_carrier_width = 30;
     rear_standard_carrier_base_length = 258.5;
     rear_standard_carrier_base_flat_length = 30.25;
     rear_standard_carrier_base_slot_length = 160;

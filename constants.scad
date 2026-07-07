@@ -11,6 +11,7 @@
 // 4. Base
 // 5. Ground Glass
 // 6. Film Cassette
+// 7. Movements
 
 
 
@@ -18,6 +19,7 @@
 * 1. Materials  *
 * **************/
     sheet_metal_thickness_structural = 2;
+    sheet_metal_thickness_nonstructural = 2;
     screw_hole_metric_3 = 3;
     screw_hole_metric_4 = 4;
     screw_hole_metric_5 = 5;
@@ -51,6 +53,7 @@
 
 
     // 2.3 Rear Standard Tilt Plate
+    rear_standard_tilt_plate_thickness = sheet_metal_thickness_nonstructural;
     rear_standard_tilt_slot_radius = 45;
     rear_standard_tilt_slot_width = 5;
     rear_standard_tilt_slot_range = 50;
@@ -58,4 +61,9 @@
 
     // 2.4 Rear Standard Rise Plate
     rear_standard_pivot_stud_diameter = 4;
-    
+
+/****************
+* 7. Movements  *
+* **************/
+    rear_standard_rise_zero_pos = 25;
+    rear_standard_rise = 0;

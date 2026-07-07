@@ -2,6 +2,7 @@ include <../../constants.scad>
 use <./rear_standard_tilt_slot.scad>
 
 module rear_standard_tilt_plate() {
+    linear_extrude(height = rear_standard_tilt_plate_thickness) 
     difference() {
         // base shape
         union() {
@@ -14,7 +15,7 @@ module rear_standard_tilt_plate() {
             }
         }
         // hole for pivot stud
-        #circle(r = (rear_standard_pivot_stud_diameter / 2) + 1);
+        circle(r = (rear_standard_pivot_stud_diameter / 2) + 1);
         // slot cutout
         rotate(a = 90, v = [0,0,1]) {
             rear_standard_tilt_slot();

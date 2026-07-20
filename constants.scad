@@ -65,5 +65,6 @@
 /****************
 * 7. Movements  *
 * **************/
+    zero_marker_side_length = 4;
     rear_standard_rise_zero_pos = 29.5;
     rear_standard_rise = 0;

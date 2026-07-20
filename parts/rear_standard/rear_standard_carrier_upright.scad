@@ -13,7 +13,7 @@ module rear_standard_carrier_upright() {
             zero_marker_offset_y = rear_standard_carrier_width / 2;
             translate(v = [zero_marker_offset_x,zero_marker_offset_y,0]) {    
                 rotate(a = 45, v = [0,0,1]) {
-                    square(size = [4,4], center = true);
+                    square(size = [zero_marker_side_length,zero_marker_side_length], center = true);
                 }
             }
 

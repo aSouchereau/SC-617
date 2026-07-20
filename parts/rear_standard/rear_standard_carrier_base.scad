@@ -37,7 +37,7 @@ module carrier_base(folded = true) {
         zero_marker_offset = rear_standard_carrier_width / 2;
         translate(v = [0,zero_marker_offset,0]) {    
             rotate(a = 45, v = [0,0,1]) {
-                linear_extrude(height = rear_standard_carrier_thickness) square(size = [4,4], center = true);
+                linear_extrude(height = rear_standard_carrier_thickness) square(size = [zero_marker_side_length,zero_marker_side_length], center = true);
             }
         }
     }

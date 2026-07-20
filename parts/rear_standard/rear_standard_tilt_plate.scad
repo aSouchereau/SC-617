@@ -7,8 +7,10 @@ module rear_standard_tilt_plate() {
         // base shape
         union() {
             slot_outline_thickness = 3;
-            translate(v = [0,rear_standard_housing_height / 5,0]) {
-                square(size = [rear_standard_housing_depth,rear_standard_housing_height / 1.75], center = true);
+            plate_height = rear_standard_housing_height / 1.75;
+            plate_offset_y = plate_height / 3;
+            translate(v = [0,plate_offset_y,0]) {
+                square(size = [rear_standard_housing_depth,plate_height], center = true);
             }
             rotate(a = 90, v = [0,0,1]) {
                 rear_standard_tilt_slot(additional_slot_width = slot_outline_thickness * 2);

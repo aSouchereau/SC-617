@@ -80,7 +80,7 @@ module rear_standard_housing() {
                 rear_standard_housing_side_short();
             } 
         } 
-    } 
+    }
 }
 
 rear_standard_housing();

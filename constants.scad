@@ -18,7 +18,7 @@
 /****************
 * 1. Materials  *
 * **************/
-    sheet_metal_thickness_structural = 2;
+    sheet_metal_thickness_structural = 3;
     sheet_metal_thickness_nonstructural = 2;
     screw_hole_metric_3 = 3;
     screw_hole_metric_4 = 4;
@@ -33,7 +33,7 @@
     rear_standard_carrier_thickness = sheet_metal_thickness_structural;
     rear_standard_carrier_width = 30;
     rear_standard_carrier_base_length = 258.5;
-    rear_standard_carrier_base_flat_length = 30.25;
+    rear_standard_carrier_base_ear_length = 40;
     rear_standard_carrier_base_slot_length = 160;
     rear_standard_carrier_base_slot_width = 6;
     rear_standard_carrier_upright_length = 149;
@@ -65,5 +65,5 @@
 /****************
 * 7. Movements  *
 * **************/
-    rear_standard_rise_zero_pos = 25;
+    rear_standard_rise_zero_pos = 29.5;
     rear_standard_rise = 0;

@@ -32,7 +32,7 @@
     // 2.1 Rear Standard Carrier
     rear_standard_carrier_thickness = sheet_metal_thickness_structural;
     rear_standard_carrier_width = 30;
-    rear_standard_carrier_base_length = 258.5;
+    rear_standard_carrier_base_length = 259.5;
     rear_standard_carrier_base_ear_length = 40;
     rear_standard_carrier_base_slot_length = 160;
     rear_standard_carrier_base_slot_width = 6;
@@ -66,5 +66,5 @@
 * 7. Movements  *
 * **************/
     zero_marker_side_length = 4;
-    rear_standard_rise_zero_pos = 29.5;
+    rear_standard_rise_zero_pos = rear_standard_carrier_upright_length + rear_standard_carrier_base_ear_length / 2 - rear_standard_housing_height;
     rear_standard_rise = 0;

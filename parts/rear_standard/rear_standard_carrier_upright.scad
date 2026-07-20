@@ -9,7 +9,7 @@ module rear_standard_carrier_upright() {
             square([rear_standard_carrier_upright_length, rear_standard_carrier_width], center = true);
 
             // Zero marker
-            zero_marker_offset_x = 10;
+            zero_marker_offset_x = 24.5;
             zero_marker_offset_y = rear_standard_carrier_width / 2;
             translate(v = [zero_marker_offset_x,zero_marker_offset_y,0]) {    
                 rotate(a = 45, v = [0,0,1]) {

@@ -51,11 +51,7 @@ module rear_standard_housing_side_short() {
                 }
             }
         }
-        translate(v = [0,0,-1]) {
-            linear_extrude(height = 6) {
-                circle(r = 2);
-            } 
-        }
+        // tilt slot
         translate(v = [0,0,-6]) {
             linear_extrude(height = rear_standard_housing_thickness) {
                 rear_standard_tilt_slot(additional_slot_width = rear_standard_housing_tilt_slot_additional_width);

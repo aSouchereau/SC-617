@@ -3,10 +3,10 @@
 * *******************/
 // 1. Materials
 // 2. Rear Standard
-    // 2.1 Rear Standard Carrier
-    // 2.2 Rear Standard Housing
-    // 2.3 Rear Standard Tilt Plate
-    // 2.4 Rear Standard Rise Plate
+    // 2.1 Rear Standard Housing
+    // 2.2 Rear Standard Tilt Plate
+    // 2.3 Rear Standard Rise Plate
+    // 2.4 Rear Standard Carrier
 // 3. Front Standard
 // 4. Base
 // 5. Ground Glass
@@ -19,7 +19,7 @@
 * 1. Materials  *
 * **************/
     sheet_metal_thickness_structural = 3;
-    sheet_metal_thickness_nonstructural = 2;
+    sheet_metal_thickness_nonstructural = 2.75; // 2.75 for 3d print, 2 otherwise
     screw_hole_metric_3 = 3;
     screw_hole_metric_4 = 4;
     screw_hole_metric_5 = 5;
@@ -29,10 +29,36 @@
 * 2. Rear Standard  *
 * *******************/
 
-    // 2.1 Rear Standard Carrier
+    // 2.1 Rear Standard Housing
+    rear_standard_housing_width = 245;
+    rear_standard_housing_height = 126;
+    rear_standard_housing_depth = 30;
+    rear_standard_housing_thickness = 10;
+    rear_standard_housing_frame_width = 33;
+    rear_standard_housing_tilt_slot_additional_width = 2; // screw head diameter + small margin - rear_standard_tilt_slot_width
+    
+
+
+    // 2.2 Rear Standard Tilt Plate
+    rear_standard_tilt_plate_thickness = sheet_metal_thickness_nonstructural;
+    rear_standard_tilt_slot_radius = 45;
+    rear_standard_tilt_slot_width = 5;
+    rear_standard_tilt_slot_range = 50;
+    rear_standard_tilt_slot_rotational_offset = 5;
+    rear_standard_tilt_pivot_diameter = 4;
+    rear_standard_tilt_pivot_length = rear_standard_tilt_plate_thickness;
+
+
+
+    // 2.3 Rear Standard Rise Plate
+    rear_standard_rise_stud_diameter = screw_hole_metric_4;
+    rear_standard_rise_plate_thickness = sheet_metal_thickness_nonstructural;
+
+
+    // 2.4 Rear Standard Carrier
     rear_standard_carrier_thickness = sheet_metal_thickness_structural;
     rear_standard_carrier_width = 30;
-    rear_standard_carrier_base_length = 259.5;
+    rear_standard_carrier_base_length = rear_standard_housing_width + ((rear_standard_tilt_plate_thickness + rear_standard_rise_plate_thickness) * 2) + (rear_standard_carrier_thickness * 2) + .25;
     rear_standard_carrier_base_ear_length = 40;
     rear_standard_carrier_base_slot_length = 160;
     rear_standard_carrier_base_slot_width = 6;
@@ -43,24 +69,6 @@
     rear_standard_carrier_screw_hole_triangle_height = (rear_standard_carrier_screw_hole_triangle_side_length * sqrt(3)) / 2;
     rear_standard_carrier_screw_hole_triangle_top_margin = 5;
 
-    // 2.2 Rear Standard Housing
-    rear_standard_housing_width = 245;
-    rear_standard_housing_height = 126;
-    rear_standard_housing_depth = 30;
-    rear_standard_housing_thickness = 10;
-    rear_standard_housing_frame_width = 33;
-    rear_standard_housing_tilt_slot_additional_width = 2; // screw head diameter + small margin - rear_standard_tilt_slot_width
-
-
-    // 2.3 Rear Standard Tilt Plate
-    rear_standard_tilt_plate_thickness = sheet_metal_thickness_nonstructural;
-    rear_standard_tilt_slot_radius = 45;
-    rear_standard_tilt_slot_width = 5;
-    rear_standard_tilt_slot_range = 50;
-    rear_standard_tilt_slot_rotational_offset = 5;
-
-    // 2.4 Rear Standard Rise Plate
-    rear_standard_pivot_stud_diameter = 4;
 
 /****************
 * 7. Movements  *

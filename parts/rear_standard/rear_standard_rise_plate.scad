@@ -34,7 +34,7 @@ module rear_standard_rise_plate(print = true) {
 
                 // hole for tilt lock screw
                 translate(v = [0,rear_standard_tilt_slot_radius - .25,0]) {
-                    circle(r = (rear_standard_tilt_pivot_diameter / 2) + 0.25);
+                    circle(r = (rear_standard_tilt_lock_screw_diameter / 2) + 0.25);
                 } 
             }
             if (print) {

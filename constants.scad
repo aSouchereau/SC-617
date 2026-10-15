@@ -45,13 +45,13 @@
     rear_standard_tilt_slot_width = 5;
     rear_standard_tilt_slot_range = 50;
     rear_standard_tilt_slot_rotational_offset = 5;
-    rear_standard_tilt_pivot_diameter = 4;
-    rear_standard_tilt_pivot_length = rear_standard_tilt_plate_thickness;
+    rear_standard_tilt_lock_screw_diameter = 4;
+    rear_standard_tilt_pivot_diameter = 6;
 
 
 
     // 2.3 Rear Standard Rise Plate
-    rear_standard_rise_stud_diameter = screw_hole_metric_4;
+    rear_standard_rise_stud_diameter = screw_hole_metric_5;
     rear_standard_rise_plate_thickness = sheet_metal_thickness_nonstructural;
 
 

@@ -30,7 +30,7 @@ module rear_standard_tilt_plate(print = false) {
 
         // 3d printed pivot
         if (print) {
-            translate(v = [0,0,rear_standard_tilt_plate_thickness]) linear_extrude(height = rear_standard_tilt_pivot_length) circle(r = rear_standard_tilt_pivot_diameter / 2 - .25);
+            translate(v = [0,0,rear_standard_tilt_plate_thickness]) linear_extrude(height = rear_standard_rise_plate_thickness + rear_standard_carrier_thickness - 1) circle(r = rear_standard_tilt_pivot_diameter / 2 - .25);
         }
     }
 }

@@ -42,7 +42,7 @@
     // 2.2 Rear Standard Tilt Plate
     rear_standard_tilt_plate_thickness = sheet_metal_thickness_nonstructural;
     rear_standard_tilt_slot_radius = 45;
-    rear_standard_tilt_slot_width = 5;
+    rear_standard_tilt_slot_width = 4;
     rear_standard_tilt_slot_range = 50;
     rear_standard_tilt_slot_rotational_offset = 5;
     rear_standard_tilt_lock_screw_diameter = 4;
